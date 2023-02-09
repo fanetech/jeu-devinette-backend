@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     pseudo: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     mark: {
       type: DataTypes.INTEGER,

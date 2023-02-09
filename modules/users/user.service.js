@@ -19,8 +19,8 @@ module.exports.update = async (userId, payload) => {
   return this.findOne(data[0]);
 };
 
-module.exports.findOne = async (userId) => {
-  return await user.findOne({ where: { userId } });
+module.exports.findOne = async (pseudo) => {
+  return await user.findOne({ where: { pseudo } });
 };
 
 module.exports.delete = async (userId) => {
