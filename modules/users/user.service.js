@@ -16,10 +16,14 @@ module.exports.update = async (userId, payload) => {
       userId,
     },
   });
-  return this.findOne(data[0]);
+  return await this.findById(userId);
 };
 
-module.exports.findOne = async (pseudo) => {
+module.exports.findById = async (userId) => {
+  return await user.findOne({ where: { userId } });
+};
+
+module.exports.findByPseudo = async (pseudo) => {
   return await user.findOne({ where: { pseudo } });
 };
 

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     mark: {
       type: DataTypes.INTEGER,
       allowNull: true,
+      defaultValue: 0,
     },
   });
   return user;
