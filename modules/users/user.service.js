@@ -3,7 +3,9 @@ const {
 } = require("../../db/db");
 
 module.exports.getAll = async () => {
-  return user.findAll();
+  return user.findAll({
+    order: [["mark", "DESC"]],
+  });
 };
 
 module.exports.create = async (payload) => {
